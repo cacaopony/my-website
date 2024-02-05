@@ -23,8 +23,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `news`,
+        path: `${__dirname}/src/news`, // このパスをニュース記事が格納されるディレクトリに合わせてください
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`, 
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
